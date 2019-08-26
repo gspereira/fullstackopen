@@ -1,0 +1,15 @@
+note over browser
+User writes a new note.
+end note
+
+note over browser
+RedrawNotes()
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+server-->browser: 201 - Created
+
+note over browser
+Inside the page code there's a function that append the
+created note. So there's no need to make more requests.
+end note
